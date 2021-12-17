@@ -34,12 +34,7 @@ If you wish to issue an `access_token` for your user, modify the `connect functi
 npm install
 ```
 
-2. Modify files.
-```bash
-npm run start:dev
-```
-
-3. Start sample.
+2. Start sample
 ```bash
 npm start
 ```
