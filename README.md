@@ -1,5 +1,5 @@
 # SendBird JavaScript Widget Sample
-This is a sample chat widget built using using the [Sendbird SDK](https://github.com/sendbird/SendBird-SDK-JavaScript). It can be used to add a functional chat widget to any website.  
+This is a sample chat widget built using using the [Sendbird SDK](https://github.com/sendbird/SendBird-SDK-JavaScript). It can be used to add a functional chat widget to any website.
 
 
 ## [Demo](https://sample.sendbird.com/widget/)
@@ -9,25 +9,24 @@ You can try out a live demo from the link [here](https://sample.sendbird.com/wid
 
 ## Setup
 1. The `body` must have a `div` element whose id is `sb_widget`.
-  
+
 ```html
 <body>
   <div id="sb_widget"></div>
 </body>
 ```
 
-2. Import the [`Sendbird SDK`](https://github.com/sendbird/SendBird-SDK-JavaScript).  
-3. Import the `widget.SendBird.js` file.
+<!-- 2. Import the [`Sendbird SDK`](https://github.com/sendbird/SendBird-SDK-JavaScript). -->
+2. Import the `widget.SendBird.js` file.
 ```javascript
-<script src="SendBird.min.js"></script>
 <script src="dist/widget.SendBird.js"></script>
 ```
 
 
 ## Customizing the widget
-If you refresh your browser window, you need to reconnect to SendBird. To retain connection on browser refresh, you must implement an appropriate `event handler`. 
+If you refresh your browser window, you need to reconnect to SendBird. To retain connection on browser refresh, you must implement an appropriate `event handler`.
 
-If you wish to issue an `access_token` for your user, modify the `connect function` in `src/sendbird.js`.  
+If you wish to issue an `access_token` for your user, modify the `connect function` in `src/sendbird.js`.
 
 > Require that you have Node v8.x+ installed.
 1. Install npm
@@ -39,20 +38,19 @@ npm install
 ```bash
 npm run start:dev
 ```
-        
+
 3. Start sample.
 ```bash
 npm start
 ```
 
-## Advanced  
-### Connect other APP or Channel  
+## Advanced
+### Connect other APP or Channel
 If you want to connect other application, you need to change variable `appId` in `index.html`.
 
 ```html
 ...
 
-  <script src="SendBird.min.js"></script>
   <script src="dist/widget.SendBird.js"></script>
   <script>
     var appId = '<APP_ID>';
@@ -62,13 +60,12 @@ If you want to connect other application, you need to change variable `appId` in
 </html>
 ```
 
-### Start with User connect  
-If you want to start this sample with user connect, you can using `startWithConnect()`.  
+### Start with User connect
+If you want to start this sample with user connect, you can using `startWithConnect()`.
 
 ```html
 ...
 
-  <script src="SendBird.min.js"></script>
   <script src="dist/widget.SendBird.js"></script>
   <script>
     var appId = '<APP_ID>';
@@ -82,8 +79,8 @@ If you want to start this sample with user connect, you can using `startWithConn
 </html>
 ```
 
-### Show Channel  
-If you want to open chat, you can using `showChannel()`.  
+### Show Channel
+If you want to open chat, you can using `showChannel()`.
 
 ```javascript
 ...
@@ -101,7 +98,7 @@ sbWidget.showChannel(channelUrl);
         |-- ...                             - (node packages)
     |-- src
         |-- js
-            |-- elements  
+            |-- elements
                 |-- elements.js             - elements root class
                 |-- spinner.js              - spinner element
                 |-- widget-btn.js           - widget button element
@@ -113,8 +110,8 @@ sbWidget.showChannel(channelUrl);
             |-- sendbird.js                 - sendbird functions
             |-- widget.js                   - widget functions
         |-- scss
-            |-- mixins 
-                |-- _border-radius.scss     - border radius mixin  
+            |-- mixins
+                |-- _border-radius.scss     - border radius mixin
                 |-- _box-shadow.scss        - box shadow mixin
                 |-- _state.scss             - element state mixin
                 |-- _transform.scss         - transform mixin
@@ -122,12 +119,10 @@ sbWidget.showChannel(channelUrl);
             |-- _mixins.scss                - import mixin
             |-- _variables.scss             - css variables
             |-- _animation.scss             - animation
-            |-- _icons.scss                 - icon 
-            |-- widget.scss                 - main css  
-|-- .eslintrc.js                            - lint setting 
-|-- webpack.config.js                       - webpack setting 
-|-- package.json                            - npm package 
-|-- SendBird.min.js                         - SendBird SDK 
+            |-- _icons.scss                 - icon
+            |-- widget.scss                 - main css
+|-- webpack.config.js                       - webpack setting
+|-- package.json                            - npm package
 |-- index.html                              - sample file
 |-- README.md
 ```

@@ -7,8 +7,8 @@ app.use(express.static('dist'));
 app.use(express.static('./'));
 
 app.get('/', function(req, res) {
-  res.sendfile('index.html');
+  res.sendFile('index.html');
 });
 
 app.listen(PORT);
-console.log(`[SERVER RUNNING] 127.0.0.1:${PORT}`);
+console.log(`[SERVER RUNNING] http://localhost:${PORT}`);

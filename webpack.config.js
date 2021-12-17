@@ -9,9 +9,10 @@ module.exports = {
     filename: '[name].SendBird.js',
     publicPath: "dist"
   },
-  devtool: "cheap-eval-source-map",
   devServer: {
-    publicPath: '/dist/',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     compress: true,
     port: 9000
   },
@@ -28,19 +29,6 @@ module.exports = {
           },
           {
             loader: 'sass-loader'
-          }
-        ]
-      },
-      { // ESLint
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: /(node_modules|SendBird.min.js)/,
-        use: [
-          {
-            loader: 'eslint-loader',
-            options: {
-              failOnError: true
-            }
           }
         ]
       },
